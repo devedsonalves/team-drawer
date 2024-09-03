@@ -16,8 +16,8 @@ function sortTeams() {
     }
     
     let teams = [];
-    let dreamTeam = ['edson', 'cabecinha', 'biel', 'jefte'];
-    let nightmareTeam = ['ppranch', 'sibito', 'pezao', 'julio'];
+    let dreamTeam = ['edson', 'cabecinha', 'araujo', 'jefte'];
+    let nightmareTeam = ['ppranch', 'sibito', 'leo', 'julio'];
 
     players = players.filter(player => !dreamTeam.includes(player) && !nightmareTeam.includes(player));
     
@@ -31,8 +31,8 @@ function sortTeams() {
         teams.push([]);
     }
 
-    if (teams.length > 0) teams[0].push(...dreamTeam);
-    if (teams.length > 1) teams[1].push(...nightmareTeam);
+    if (teams.length > 0) teams[0].push(...nightmareTeam);
+    if (teams.length > 1) teams[1].push(...dreamTeam);
 
     players.forEach(player => {
         for (let i = 0; i < teams.length; i++) {
@@ -51,7 +51,7 @@ function sortTeams() {
     teams.forEach((team, index) => {
         const teamDiv = document.createElement('div');
         teamDiv.classList.add('team');
-        teamDiv.innerHTML = `<strong>Equipe ${index + 1}:</strong><br>${team.join('<br>')}`;
+        teamDiv.innerHTML = `<strong>Equipe ${index + 1}:</strong><li>${team.join('<li>').toUpperCase()}`;
         resultDiv.appendChild(teamDiv);
     });
 }
