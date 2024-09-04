@@ -16,8 +16,8 @@ function sortTeams() {
     }
     
     let teams = [];
-    let dreamTeam = ['edson', 'cabecinha', 'araujo', 'jefte'];
-    let nightmareTeam = ['ppranch', 'sibito', 'leo', 'julio'];
+    let dreamTeam = ['ppranch', 'cabecinha', 'araujo', 'marcos'];
+    let nightmareTeam = ['edson', 'danilo', 'kayky', 'cloves'];
 
     players = players.filter(player => !dreamTeam.includes(player) && !nightmareTeam.includes(player));
     
